@@ -7,6 +7,7 @@ import com.example.spring_project01.dto.response.ScheduleCreateResponse;
 import com.example.spring_project01.dto.response.ScheduleDetailResponse;
 import com.example.spring_project01.dto.response.ScheduleResponse;
 import com.example.spring_project01.service.ScheduleService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,7 @@ public class ScheduleController {
 
     // 일정 추가
     @PostMapping("/schedules")
-    public ScheduleCreateResponse createSchedule(@RequestBody ScheduleCreateRequest request) {
+    public ScheduleCreateResponse createSchedule(@Valid @RequestBody ScheduleCreateRequest request) {
         return scheduleService.createSchedule(request);
     }
 
@@ -39,13 +40,13 @@ public class ScheduleController {
 
     // 일정 수정
     @PutMapping("/schedules/{id}")
-    public ScheduleResponse updateSchedule(@PathVariable Long id, @RequestBody ScheduleUpdateRequest request) {
+    public ScheduleResponse updateSchedule(@PathVariable Long id,@Valid @RequestBody ScheduleUpdateRequest request) {
         return scheduleService.updateSchedule(id, request);
     }
 
     // 일정 삭제
     @DeleteMapping("/schedules/{id}")
-    public String deleteSchedule(@PathVariable Long id, @RequestBody ScheduleDeleteRequest request) {
+    public String deleteSchedule(@PathVariable Long id,@Valid @RequestBody ScheduleDeleteRequest request) {
         scheduleService.deleteSchedule(id, request);
         return "삭제 완료";
     }

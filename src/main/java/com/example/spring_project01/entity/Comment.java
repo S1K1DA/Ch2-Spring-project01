@@ -21,7 +21,7 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 300)
+    @Column(nullable = false, length = 100)
     private String content;
 
     @Column(nullable = false)
@@ -48,5 +48,4 @@ public class Comment {
         this.password = password;
         this.schedule = schedule;
     }
-
 }

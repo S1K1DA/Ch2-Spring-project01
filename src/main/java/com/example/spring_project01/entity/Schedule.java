@@ -23,10 +23,10 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 30)
     private String title;
 
-    @Column(nullable = false, length = 500)
+    @Column(nullable = false, length = 200)
     private String content;
 
     @Column(nullable = false)
@@ -59,3 +59,6 @@ public class Schedule {
     @OneToMany(mappedBy = "schedule", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 }
+
+
+
