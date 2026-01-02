@@ -36,6 +36,8 @@
 * `작성일(createdAt)`, `수정일(modifiedAt)`은 **JPA Auditing**으로 자동 관리
 * 최초 생성 시 `수정일 = 작성일`
 * API 응답에서 **비밀번호 제외**
+<img width="2472" height="1055" alt="image" src="https://github.com/user-attachments/assets/fce915b9-0eb7-4bfc-acdb-eafc94882a65" />
+<img width="1963" height="262" alt="image" src="https://github.com/user-attachments/assets/96140187-998e-4795-8098-b4b1c33b2a4a" />
 
 ---
 
@@ -46,6 +48,7 @@
 * `수정일 기준 내림차순` 정렬
 * API 응답에서 **비밀번호 제외**
 * 작성자 기준 일정 조회 (`Query Parameter` 활용)
+<img width="2411" height="1365" alt="image" src="https://github.com/user-attachments/assets/3d3e16b5-0ecb-4793-b39c-13fd55cd8ccf" />
 
 ---
 
@@ -59,6 +62,7 @@
   * 작성자명
 * `작성일`은 유지되며 수정 시 `수정일` 자동 갱신
 * API 응답에서 **비밀번호 제외**
+<img width="2445" height="1293" alt="image" src="https://github.com/user-attachments/assets/c4a03207-892d-4007-83e1-a9f3e4a797a5" />
 
 ---
 
@@ -67,6 +71,7 @@
 * 일정 ID를 통해 특정 일정 삭제
 * **비밀번호 검증 후 삭제 가능**
 * 삭제 완료 시 정상 응답 반환
+<img width="2467" height="1208" alt="image" src="https://github.com/user-attachments/assets/05604fe2-d2f3-47bc-b0c4-9663b4ea989b" />
 
 ---
 
@@ -80,6 +85,8 @@
 * `작성일`, `수정일`은 **JPA Auditing** 적용
 * 하나의 일정에는 **최대 10개의 댓글만 등록 가능**
 * API 응답에서 **비밀번호 제외**
+<img width="2330" height="1084" alt="image" src="https://github.com/user-attachments/assets/b88cce06-19ca-4c28-8d63-af5cd3433d40" />
+<img width="1560" height="199" alt="image" src="https://github.com/user-attachments/assets/e8272578-ef38-4bdb-990e-5fc543a2fad8" />
 
 ---
 
@@ -88,6 +95,7 @@
 * 일정 단건 조회 시 해당 일정에 등록된 **댓글 목록 포함**
 * 댓글 정보는 Response DTO로 변환하여 반환
 * API 응답에서 **비밀번호 제외**
+<img width="2406" height="1283" alt="image" src="https://github.com/user-attachments/assets/2fa855e3-c60f-41c7-aef1-09fb3cd2a9d6" />
 
 ---
 
@@ -364,5 +372,6 @@ Response
 - @RequestParam은 URL의 Query Paramter 값을 전달받을 때 사용하는 어노테이션이며 선택값으로 사용할수있고 필터 조건 등에 주로 활용합니다!
 - @PathVariable은 URL 경로에 포함된 값을 변수로 전달받을때 사용하는 어노테이션입니다! 주로 특정 식별하는 ID 값 전달에 사용합니다!
 - @RequestBody는 HTTP요청 Body에 담긴 JSON 데이터를 자바 객체로 변환할때 사용합니다! POST,PUT,DELETE 요청에서 주로 활용합니다!!
+
 
 
